@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flowboard — Visual Project Management</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__mark" aria-hidden="true">▣</span>
+        <span class="brand__name">Flowboard</span>
+      </div>
+      <div class="topbar__actions">
+        <div class="search">
+          <span aria-hidden="true">🔎</span>
+          <input type="search" placeholder="Search cards, members, or labels" />
+        </div>
+        <button class="ghost-button">Invite</button>
+        <button class="primary-button">Create</button>
+      </div>
+    </header>
+
+    <div class="app">
+      <aside class="sidebar">
+        <section class="sidebar__section">
+          <h2>Workspaces</h2>
+          <button class="sidebar__item sidebar__item--active">Marketing HQ</button>
+          <button class="sidebar__item">Product Roadmap</button>
+          <button class="sidebar__item">Design Studio</button>
+        </section>
+        <section class="sidebar__section">
+          <h2>Boards</h2>
+          <button class="sidebar__item sidebar__item--active">
+            Launch Campaign
+            <span class="sidebar__pill">Today</span>
+          </button>
+          <button class="sidebar__item">Website Redesign</button>
+          <button class="sidebar__item">Hiring Pipeline</button>
+          <button class="sidebar__item">Customer Onboarding</button>
+        </section>
+        <section class="sidebar__section">
+          <h2>Views</h2>
+          <button class="sidebar__item">Board view</button>
+          <button class="sidebar__item">Timeline</button>
+          <button class="sidebar__item">Calendar</button>
+          <button class="sidebar__item">Dashboard</button>
+        </section>
+      </aside>
+
+      <main class="board">
+        <header class="board__header">
+          <div>
+            <p class="board__eyebrow">Marketing • Q3</p>
+            <h1>Launch Campaign</h1>
+            <div class="board__meta">
+              <span>12 members</span>
+              <span>38 open tasks</span>
+              <span>Next milestone: Sep 18</span>
+            </div>
+          </div>
+          <div class="board__actions">
+            <button class="ghost-button">Automation</button>
+            <button class="ghost-button">Share</button>
+            <button class="primary-button" data-action="add-list">Add list</button>
+          </div>
+        </header>
+
+        <section class="lists" id="lists">
+          <article class="list">
+            <header>
+              <div>
+                <h2>To do</h2>
+                <p>Ideas and next steps</p>
+              </div>
+              <span class="pill">6</span>
+            </header>
+            <button class="list__add" data-action="add-card">＋ Add card</button>
+            <div class="card">
+              <div class="card__labels">
+                <span class="label label--coral">Copy</span>
+                <span class="label label--violet">Research</span>
+              </div>
+              <h3>Gather customer quotes</h3>
+              <p>Reach out to beta users for testimonials.</p>
+              <div class="card__meta">
+                <span>Due Tue</span>
+                <span>✦ 2 files</span>
+              </div>
+              <div class="card__footer">
+                <div class="avatars">
+                  <span aria-hidden="true">AS</span>
+                  <span aria-hidden="true">JM</span>
+                </div>
+                <span class="badge">3 comments</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__labels">
+                <span class="label label--mint">Design</span>
+              </div>
+              <h3>Draft email nurture</h3>
+              <p>Outline 4-touch sequence with CTA.</p>
+              <div class="card__meta">
+                <span>Due Thu</span>
+                <span>✦ 4 steps</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="list">
+            <header>
+              <div>
+                <h2>In progress</h2>
+                <p>Work happening now</p>
+              </div>
+              <span class="pill pill--active">3</span>
+            </header>
+            <button class="list__add" data-action="add-card">＋ Add card</button>
+            <div class="card card--active">
+              <div class="card__labels">
+                <span class="label label--sun">Priority</span>
+                <span class="label label--sky">Design</span>
+              </div>
+              <h3>Design landing page</h3>
+              <p>Finalize hero illustration and CTA panel.</p>
+              <div class="card__meta">
+                <span>Due Today</span>
+                <span>✦ 3 comments</span>
+              </div>
+              <div class="card__footer">
+                <div class="avatars">
+                  <span aria-hidden="true">KR</span>
+                </div>
+                <span class="badge">Checklist 4/6</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__labels">
+                <span class="label label--mint">Video</span>
+              </div>
+              <h3>Social teaser clips</h3>
+              <p>Storyboard 15s and 30s variants.</p>
+              <div class="card__meta">
+                <span>Due Fri</span>
+                <span>✦ 6 assets</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="list">
+            <header>
+              <div>
+                <h2>Review</h2>
+                <p>Waiting on approvals</p>
+              </div>
+              <span class="pill pill--warning">2</span>
+            </header>
+            <button class="list__add" data-action="add-card">＋ Add card</button>
+            <div class="card">
+              <div class="card__labels">
+                <span class="label label--violet">Legal</span>
+              </div>
+              <h3>Paid ad copy review</h3>
+              <p>Compliance check before scheduling.</p>
+              <div class="card__meta">
+                <span>Due Mon</span>
+                <span>✦ 2 reviewers</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="list">
+            <header>
+              <div>
+                <h2>Done</h2>
+                <p>Completed deliverables</p>
+              </div>
+              <span class="pill pill--done">5</span>
+            </header>
+            <button class="list__add" data-action="add-card">＋ Add card</button>
+            <div class="card">
+              <div class="card__labels">
+                <span class="label label--mint">Planning</span>
+              </div>
+              <h3>Define campaign goals</h3>
+              <p>Aligned KPIs with leadership.</p>
+              <div class="card__meta">
+                <span>Completed</span>
+                <span>✓ Signed off</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__labels">
+                <span class="label label--sky">Budget</span>
+              </div>
+              <h3>Channel budget plan</h3>
+              <p>Allocated spend across four channels.</p>
+              <div class="card__meta">
+                <span>Completed</span>
+                <span>✓ Approved</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const listContainer = document.querySelector("#lists");
+
+      document.querySelectorAll("[data-action='add-card']").forEach((button) => {
+        button.addEventListener("click", () => {
+          const title = window.prompt("Card title");
+          if (!title) {
+            return;
+          }
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <div class="card__labels">
+              <span class="label label--mint">New</span>
+            </div>
+            <h3>${title}</h3>
+            <p>Add details, due date, or checklist.</p>
+            <div class="card__meta">
+              <span>Just added</span>
+              <span>✦ 0 comments</span>
+            </div>
+          `;
+          button.insertAdjacentElement("afterend", card);
+        });
+      });
+
+      document.querySelector("[data-action='add-list']").addEventListener("click", () => {
+        const title = window.prompt("List name");
+        if (!title) {
+          return;
+        }
+        const list = document.createElement("article");
+        list.className = "list";
+        list.innerHTML = `
+          <header>
+            <div>
+              <h2>${title}</h2>
+              <p>New list</p>
+            </div>
+            <span class="pill">0</span>
+          </header>
+          <button class="list__add" data-action="add-card">＋ Add card</button>
+        `;
+        listContainer.appendChild(list);
+        list
+          .querySelector("[data-action='add-card']")
+          .addEventListener("click", () => {
+            const cardTitle = window.prompt("Card title");
+            if (!cardTitle) {
+              return;
+            }
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+              <div class="card__labels">
+                <span class="label label--mint">New</span>
+              </div>
+              <h3>${cardTitle}</h3>
+              <p>Add details, due date, or checklist.</p>
+              <div class="card__meta">
+                <span>Just added</span>
+                <span>✦ 0 comments</span>
+              </div>
+            `;
+            list.appendChild(card);
+          });
+      });
+    </script>
+  </body>
+</html>
